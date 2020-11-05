@@ -1,0 +1,101 @@
+/* === Small CSS Reset === */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body{
+  /* background-color: #000; */
+  font-family: sans-serif;
+  /* height: 500vh; */
+}
+
+/* Navigation */
+
+nav {
+  position: fixed;
+  padding: 2rem 0;
+  width: 100%;
+  background: rgba(22, 22, 22, 0.856);
+  display: flex;
+  justify-content: space-evenly;
+}
+
+nav > ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  margin: 0 1rem;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+}
+
+nav ul a {
+  color: rgb(146, 146, 146);
+}
+
+/* Header */
+
+header {
+  background-image: url('../images/header_background.jpg');
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10rem 0;
+}
+
+header h1 {
+  font-size: 6rem;
+  color: #fff;
+}
+
+header h2 {
+  font-size: 4rem;
+  color: #fff;
+}
+
+header a {
+  margin-top: 2rem;
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  padding: 2rem 2rem;
+  background: rgb(255, 12, 133);
+  border-radius: 2rem;
+}
+
+/* Main Section */
+
+section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+section .container {
+  padding: 4rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container img {
+  border-radius: 50%;
+  height: 500px;
+  width: auto;
+}
+
+.container .description{
+  max-width: 600px;
+}
