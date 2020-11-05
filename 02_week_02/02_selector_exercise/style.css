@@ -1,0 +1,70 @@
+
+
+/* Part 1 */
+
+h1{
+  text-transform: capitalize ;
+}
+
+.selectors > p:first-of-type {
+  color: orange;
+}
+
+.selectors > p:nth-of-type(2) {
+  color: yellow;
+}
+
+.selectors > p:last-of-type {
+  color: violet;
+}
+
+/* Part 2 */
+
+.selectors > ul {
+  color: orange;
+}
+
+.selectors > ul ul {
+  color: lime;
+}
+
+.selectors > ul ul ul {
+  color: gold;
+}
+
+/* Part 3 */
+
+.selectors th {
+  font-family: sans-serif;
+  color: orange;
+}
+
+.selectors tr:nth-child(even){
+  background: #333;
+  color: #fff;
+}
+
+.selectors tr td:nth-child(2){
+  color: lime;
+  font-family: monospace;
+}
+
+/* Part 4 */
+
+.box {
+  width: 50px;
+  height: 50px;
+  background: orange;
+}
+
+#boxy ~ .box {
+  background: lime;
+}
+
+#boxy + .box {
+  background: yellow;
+}
+
+#boxy {
+  background: transparent;
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inline vs. Block vs. Inline-Block</title>
+  <style>
+    .blocky {
+      width: 100px;
+      height: 200px;
+      background-color: #5f75f2;
+      margin: 1rem;
+    }
+
+    .blocky.wife {
+      background-color: hotpink;
+      padding: 1rem;
+    }
+
+    p > span {
+      color: red;
+      height: 200px;
+      width: 300px;
+    }
+
+    p > img {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <!-- Display Block Elements -->
+
+  <div class="blocky">I am Blocky</div>
+  <div class="blocky wife">Blocky's Wife</div>
+  
+  <!-- Inline span inside p -->
+  <p>Lorem ipsum dolor, sit amet <span>consectetur</span> adipisicing.</p>
+  <!-- Blcok div inside p -->
+  <p>Lorem ipsum dolor, sit amet <img src="https://s7d2.scene7.com/is/image/TWCNews/0710_nc_red_fox_jpg"> adipisicing.</p>
+</body>
+</html>
