@@ -1,3 +1,4 @@
+
 /* === Small CSS Reset === */
 *{
   margin: 0;
@@ -8,8 +9,12 @@
 
 body{
   /* background-color: #000; */
-  font-family: sans-serif;
+  font-family: 'Lato', sans-serif;
   /* height: 500vh; */
+}
+
+h1, h2, h3 {
+  font-family: 'Roboto', sans-serif;
 }
 
 /* Navigation */
