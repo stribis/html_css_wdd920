@@ -1,4 +1,17 @@
 
+
+/* Custom Fonts */
+
+@font-face {
+  font-family: "Another Danger";
+  src: url("../fonts/AnotherDanger.otf");
+}
+
+@font-face {
+  font-family: "Photograph";
+  src: url("../fonts/PhotographSignature.ttf");
+}
+
 /* === Small CSS Reset === */
 *{
   margin: 0;
@@ -15,6 +28,10 @@ body{
 
 h1, h2, h3 {
   font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+  font-family: "Photograph", sans-serif;
 }
 
 /* Navigation */
