@@ -67,7 +67,9 @@ nav ul a {
 
 header {
   background-image: url('../images/header_background.jpg');
+  /* background-size: cover; */
   background-size: cover;
+  background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
   justify-content: center;
