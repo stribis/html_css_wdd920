@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Tables</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+
+    /*My Reset*/
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    *, *::after, *::before{
+        box-sizing: border-box
+    }
+    table{
+
+        border-collapse: collapse;
+        border: solid black 1px;
+    }
+    
+    td{
+        width: 100px;
+        height: 100px;
+    }
+
+    tr:nth-child(even) td:nth-child(even), tr:nth-child(odd) td:nth-child(odd){
+        background-color: black;
+    }
+     
+    </style>
+</head>
+<body>
+    <h1>Tables</h1>
+    <table>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+</body>
+</html>
