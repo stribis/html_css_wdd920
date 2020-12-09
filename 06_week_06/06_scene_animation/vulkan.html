@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+    </head>   
+    <style>
+        
+        html, body {
+            width:100%;
+            height:100%;   
+            margin:0px;
+        }
+        
+        #wrapper {
+            width:100%;
+            height:100%;
+            display:block;
+            position:absolute;
+            margin: auto;
+            background: darkblue;
+            overflow:hidden;
+            animation-name:himmel;
+            animation-duration:50s;
+            animation-timing-function: linear;
+        }
+        
+        @keyframes welle {
+            0% {margin-left: -75px;}
+            50% {margin-left: -25px;}
+            100% {margin-left: -75px;}
+        }
+        @keyframes welle2 {
+            0% {margin-left: 0px;}
+            50% {margin-left: -20px;}
+            100% {margin-left: 0px;}
+        }
+        @keyframes fisch {
+            0% {transform:rotate(180deg);}
+            100% {transform:rotate(-180deg);}
+        }      
+        @keyframes boat {
+            0% {right:-250px;}
+            100% {right:calc(100% + 250px);}
+        }        
+        @keyframes schaukel {
+            0% {transform:rotate(0deg);}
+            25% {transform:rotate(2deg);}
+            75% {transform:rotate(-5deg);}
+            100% {transform:rotate(0deg);}
+        }  
+        @keyframes cloud {
+            0% {right: -400px; opacity:0.8;}
+            100% {right: 30%; opacity: 0;}   
+        }   
+        @keyframes himmel {
+            0% {background:darkblue;}
+            10% {background:#8e8a4f;}
+            15% {background:lightblue;}
+            80% {background:darkblue;}
+            90% {background:darkblue;}
+        }  
+        @keyframes sun {
+            0% {background:darkred; transform:rotate(0deg);}
+            5% {background:red;}
+            10% {background:yellow;}
+            80% {background:orange;}
+            90% {background:red;}
+            92% {background:darkred;}
+            100% {background:black; transform:rotate(140deg);}
+        }   
+        @keyframes wellenfarbe {
+            0% {opacity:1;}
+            20% {opacity:0;}
+            90% {opacity:0.2;}
+            100% {opacity:1;}
+        }    
+        
+        #sun {
+            width:200px;
+            height:200px;
+            position:absolute;
+            bottom:-200px;
+            border-radius: 100px;
+            background:darkred;
+            transform-origin:700px 300px;
+            z-index:1000;
+            animation-name:sun;
+            animation-duration:50s;
+            z-index:0;
+        }      
+        .welle-vorn-move {
+            position:absolute;
+            bottom:0;
+            width:calc(100% + 50px);
+            height:50px;
+            z-index:1000;
+            animation-name:welle2;
+            animation-duration:0.8s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in-out;
+        } 
+        .welle-vorn {
+            width:calc(100% + 50px);
+            height:50px;
+            background-image:url('img/topWave.png');
+            background-size:100%;
+        }   
+        .welle-vorn-dunkel {
+            width:calc(100% + 50px);
+            height:50px;
+            background-image:url('img/topWave-dark.png');
+            background-size:100%;
+            animation-name:wellenfarbe;
+            animation-duration:50s;
+        }    
+        .welle-hinten-move {
+            position:absolute;
+            bottom:0;
+            width:calc(100% + 50px);
+            height:50px;
+            z-index:800;
+            animation-name:welle;
+            animation-duration:2s;
+            animation-iteration-count: infinite;
+        }     
+        .welle-hinten {
+            width:calc(100% + 50px);
+            height:50px;
+            background-image:url('img/topWave.png');
+            background-size:100%;
+        }       
+        .welle-hinten-dunkel {
+            width:calc(100% + 50px);
+            height:50px;
+            background-image:url('img/topWave-dark.png');
+            background-size:100%;
+            animation-name:wellenfarbe;
+            animation-duration:50s;
+        }    
+        .fisch {
+            background-image:url('img/fish.png');
+            background-size:100%;
+            position:absolute;
+            bottom:50px;
+            margin-left:200px;
+            z-index:900;
+            height:50px;
+            width:100px;
+            transform:rotate(180deg);
+            transform-origin:50% 100px;
+            animation-name:fisch;
+            animation-duration:3s;
+            animation-iteration-count:5;
+            animation-timing-function: linear;
+            animation-delay: 4s;
+        }
+        .schaukel {
+            position:absolute;
+            bottom:0;
+            right:-250px;
+            animation-name:boat;
+            animation-duration:40s; 
+            animation-fill-mode:both;
+            z-index:850;
+            transform-origin:50% 100%;
+        }       
+        .boat {
+            animation-name:schaukel;
+            animation-duration:2s;
+            animation-iteration-count: infinite;
+            background-image: url(img/boat.png);
+            height:250px;
+            width:250px;
+            background-size:100%;
+        }       
+        .cloud {
+            width:400px;
+            height:300px;
+            background-image: url(img/cloud.png);
+            background-size:100%;
+            position:absolute;
+            background-repeat:no-repeat;
+            top:-10px;
+            right:-400px;
+            animation-name:cloud;
+            animation-duration:15s;
+            opacity: 0.5;
+        }
+                
+    </style> 
+    <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+    <!-- <script>
+        var $breite = $( document ).width();
+        $breite = $breite / 2;
+        $('#sun').css('transform-origin', $breite '300px');
+    </script> -->
+    <body>      
+        <div id="wrapper">
+            <div id="sun"></div>
+            <div class="welle-vorn-move">
+                <div class="welle-vorn"></div>
+            </div>
+            <div class="welle-vorn-move">
+                <div class="welle-vorn-dunkel"></div>
+            </div>
+            <div class="fisch"></div>
+            <div class="welle-hinten-move">
+                <div class="welle-hinten"></div>
+            </div>
+            <div class="welle-hinten-move">
+                <div class="welle-hinten-dunkel"></div>
+            </div>    
+            <div class="schaukel">
+                <div class="boat"></div>
+            </div>
+            <div class="cloud"></div>
+         </div>
+    </body>
+</html> 
